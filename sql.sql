@@ -49,3 +49,81 @@ VALUES
 (20, 'Speakers', 74699, '2020-03-01', '2023-03-01', 'JBL', 150, 4);
 select * from Product;
 select * from Employee;
+select * from Employee where id=5 and emp_dept='IT';
+select emp_name from Employee where emp_salary=25000 and emp_dept='sales';
+SELECT * FROM Employee where mgr_id=501 AND emp_name='rajesh';
+DELETE FROM Employee WHERE mgr_id=501;
+SELECT * FROM Employee where mgr_id=501 AND emp_name='raj';
+DELETE FROM Employee WHERE mgr_id=501;
+DELETE FROM Product WHERE prd_name='TV';
+select * from Product where prd_name='Printer' and prd_brand='HP';
+select * from Product where prd_name='Camera' and prd_price='2399';
+DELETE FROM Employee WHERE mgr_id=501;
+select * from Product where prd_name='acket' or prd_price=33299;
+select * from Product where prd_name='Camera' or prd_price=3;
+select * from Product where id=2 or prd_price=33299;
+SELECT * FROM Employee where mgr_id=502 or emp_name='raje';
+SELECT * FROM Employee where emp_name like '%h';
+SELECT * FROM Employee  WHERE ID IN (1,2,3); 
+SELECT * FROM Employee  WHERE mgr_id IN (2001,2002,2003); 
+SELECT * FROM Employee  WHERE ID IN (4,5,6); 
+SELECT * FROM Employee  WHERE mgr_id IN (2004,2005); 
+SELECT * FROM Employee  WHERE ID IN (7,8,9); 
+
+
+
+SELECT * FROM Product  WHERE id in (1,2,3);
+SELECT * FROM Product  WHERE prd_price in (20,30);
+SELECT * FROM Product  WHERE id in (4,5,6);
+SELECT * FROM Product  WHERE prd_quantity in (10,20);
+SELECT * FROM Product  WHERE id in (6,7,8);
+
+SELECT * FROM Emplyee WHERE ID NOT IN (1,2,3); 
+SELECT * FROM Emplyee  WHERE mgr_id NOT IN (2001,2002,2003); 
+SELECT * FROM Emplyee  WHERE ID  NOT IN (4,5,6); 
+SELECT * FROM Emplyee  WHERE mgr_id NOT IN (2004,2005); 
+SELECT * FROM Emplyee  WHERE ID NOT IN (7,8,9); 
+
+SELECT * FROM Product  WHERE id NOT IN (1,2,3);
+SELECT * FROM Product  WHERE prd_price NOT IN (20,30);
+SELECT * FROM Product  WHERE id NOT IN (4,5,6);
+SELECT * FROM Product  WHERE prd_quantity NOT IN (10,20);
+SELECT * FROM Product  WHERE id NOT IN (6,7,8);
+
+SELECT * FROM Emplyee  WHERE ID BETWEEN 1 AND 5; 
+SELECT * FROM Emplyee  WHERE ID BETWEEN 2 AND 9; 
+SELECT * FROM Emplyee  WHERE ID BETWEEN 4 AND 10; 
+SELECT * FROM Emplyee  WHERE ID BETWEEN 4 AND 7; 
+SELECT * FROM Emplyee WHERE ID BETWEEN 5 AND 10; 
+
+
+SELECT * FROM Product  WHERE id BETWEEN 1 AND 5;
+SELECT * FROM Product  WHERE id BETWEEN 1 AND 10;
+SELECT * FROM Product  WHERE id BETWEEN 2 AND 5 ;
+SELECT * FROM Product  WHERE id BETWEEN 3 AND 5;
+SELECT * FROM Product  WHERE id BETWEEN 4 AND 9;
+
+SELECT * FROM Emplyee  WHERE ID NOT BETWEEN 1 AND 5; 
+SELECT * FROM Emplyee  WHERE ID NOT BETWEEN 2 AND 9; 
+SELECT * FROM Emplyee  WHERE ID NOT BETWEEN 4 AND 10; 
+SELECT * FROM Emplyee WHERE ID NOT BETWEEN 4 AND 7; 
+SELECT * FROM Emplyee  WHERE ID NOT BETWEEN 5 AND 10; 
+
+
+SELECT * FROM Product  WHERE id NOT BETWEEN 1 AND 5;
+SELECT * FROM Product  WHERE id NOT BETWEEN 1 AND 10;
+SELECT * FROM Product  WHERE id NOT BETWEEN 2 AND 5 ;
+SELECT * FROM Product  WHERE id NOT BETWEEN 3 AND 5;
+SELECT * FROM Product  WHERE id NOT BETWEEN 4 AND 9;
+
+SELECT * FROM employee  WHERE emp_name like 's%';
+SELECT * FROM employee  WHERE emp_name like 'r%';
+SELECT * FROM employee  WHERE emp_name like '%a';
+SELECT * FROM employee  WHERE emp_name like 's%m%a';
+SELECT * FROM employee  WHERE emp_name like '%h';
+
+SELECT * FROM Product  WHERE rating like '3';
+SELECT * FROM Product  WHERE rating like '5';
+SELECT * FROM Product  WHERE rating like '2';
+SELECT * FROM Product  WHERE rating like '4';
+SELECT * FROM Product  WHERE rating like '5';
