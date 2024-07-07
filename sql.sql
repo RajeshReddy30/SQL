@@ -116,14 +116,69 @@ SELECT * FROM Product  WHERE id NOT BETWEEN 2 AND 5 ;
 SELECT * FROM Product  WHERE id NOT BETWEEN 3 AND 5;
 SELECT * FROM Product  WHERE id NOT BETWEEN 4 AND 9;
 
-SELECT * FROM employee  WHERE emp_name like 's%';
-SELECT * FROM employee  WHERE emp_name like 'r%';
-SELECT * FROM employee  WHERE emp_name like '%a';
-SELECT * FROM employee  WHERE emp_name like 's%m%a';
-SELECT * FROM employee  WHERE emp_name like '%h';
+SELECT * FROM Employee  WHERE emp_name like 's%';
+SELECT * FROM Employee  WHERE emp_name like 'r%';
+SELECT * FROM Employee  WHERE emp_name like '%a';
+SELECT * FROM Employee  WHERE emp_name like 's%m%a';
+SELECT * FROM Employee  WHERE emp_name like '%h';
 
 SELECT * FROM Product  WHERE rating like '3';
 SELECT * FROM Product  WHERE rating like '5';
-SELECT * FROM Product  WHERE rating like '2';
+SELECT * FROM Product  WHERE rating like 2;
 SELECT * FROM Product  WHERE rating like '4';
 SELECT * FROM Product  WHERE rating like '5';
+
+
+SELECT * FROM Product ORDER BY id;
+select * from Product order by prd_name;
+select * from Product order by prd_quantity desc;
+
+SELECT * FROM Employee order by emp_name;
+SELECT * FROM Employee order by id;
+SELECT * FROM Employee order by emp_salary desc;
+
+select * from Product limit 12;
+select * from Product limit 23;
+select * from Product limit 8;
+
+SELECT * FROM Employee limit 12;
+SELECT * FROM Employee limit 34;
+SELECT * FROM Employee limit 13;
+
+select length(emp_id) from Employee;
+select length(emp_name) from Employee;
+select length(emp_name),emp_name from Employee;
+select length(emp_dept) from Employee;
+select length(emp_salary),emp_salary from Employee;
+
+SELECT lower(emp_name) from Employee;
+SELECT lower(emp_salary) from Employee;
+SELECT lower(emp_dept) from Employee;
+
+SELECT LENGTH(prd_name),prd_name from Product;
+SELECT LENGTH(prd_brand),prd_brand from Product;
+SELECT LENGTH(prd_quantity),prd_quantity from Product;
+SELECT LENGTH(prd_price),prd_price from Product;
+
+SELECT Lower(prd_price),prd_price from Product;
+SELECT Lower(prd_quantity),prd_quantity from Product;
+SELECT Lower(prd_name),prd_name from Product;
+SELECT Lower(prd_brand),prd_brand from Product;
+
+
+SELECT upper(prd_price),prd_price from Product;
+SELECT upper(prd_quantity),prd_quantity from Product;
+SELECT upper(prd_name),prd_name from Product;
+SELECT upper(prd_brand),prd_brand from Product;
+SELECT upper(id),id from Product;
+
+
+SELECT upper(emp_name) from Employee;
+SELECT upper(emp_salary) from Employee;
+SELECT upper(emp_dept) from Employee;
+SELECT upper(mgr_id) from Employee;
+SELECT upper(emp_doj) from Employee;
+
+
+select instr('rajesh') from Employee;
+
