@@ -180,5 +180,101 @@ SELECT upper(mgr_id) from Employee;
 SELECT upper(emp_doj) from Employee;
 
 
-select instr('rajesh') from Employee;
+select instr('rajesh','j');
+select instr('rajesh','e');
+CONCAT:
 
+SELECT CONCAT(emp_name,emp_mgr_name) from Employee;
+
+REVERSE:
+
+SELECT REVERSE(emp_name) from Employee;
+
+REPEAT:
+
+SELECT REPEAT('abc',5);
+
+REPLACE:
+SELECT REPLACE('HPLAPTOP','HP','DELL');
+
+ALTER TABLE Employee add column emp_frd varchar(20) after emp_name;
+ALTER TABLE Employee change emp_id emp_ids bigint;
+
+CREATE TABLE country_info(id int,c_name varchar(23),c_capital varchar(24),c_population bigint,c_area float,c_continent varchar(23));
+desc country_info;
+ALTER table country_info add column c_femalepopulation bigint;
+ALTER table country_info add column c_male_population bigint, add column c_literacy varchar(23);
+
+
+
+
+
+CREATE DATABASE TASK;
+
+
+CREATE TABLE country_info (
+    country_id INT ,
+    country_name VARCHAR(100),
+    total_population BIGINT,
+    total_area DOUBLE,
+    region VARCHAR(20));
+    
+    
+ALTER TABLE country_info
+ADD COLUMN capital_city VARCHAR(100),
+ADD COLUMN official_language VARCHAR(100),
+ADD COLUMN currency VARCHAR(50),
+ADD COLUMN gdp DOUBLE,
+ADD COLUMN population_density DOUBLE,
+ADD COLUMN life_expectancy DOUBLE,
+ADD COLUMN literacy_rate DOUBLE,
+ADD COLUMN internet_penetration DOUBLE,
+ADD COLUMN median_age DOUBLE;
+
+
+ALTER TABLE country_info
+RENAME COLUMN country_id TO id,
+RENAME COLUMN country_name TO name,
+RENAME COLUMN total_population TO population,
+RENAME COLUMN total_area TO area,
+RENAME COLUMN region TO continent,
+RENAME COLUMN capital_city TO capital,
+RENAME COLUMN official_language TO language,
+RENAME COLUMN currency TO currency_name,
+RENAME COLUMN gdp TO gdp_value,
+RENAME COLUMN population_density TO density,
+RENAME COLUMN life_expectancy TO life_exp,
+RENAME COLUMN literacy_rate TO literacy,
+RENAME COLUMN internet_penetration TO internet_use,
+RENAME COLUMN median_age TO median_age_value;
+    
+
+
+ALTER TABLE country_info
+MODIFY population BIGINT,
+MODIFY area DOUBLE,
+MODIFY continent VARCHAR(100),
+MODIFY capital VARCHAR(150),
+MODIFY language VARCHAR(100),
+MODIFY currency_name VARCHAR(50),
+MODIFY gdp_value FLOAT,
+MODIFY density FLOAT,
+MODIFY life_exp FLOAT;
+
+
+
+ALTER TABLE country_info
+CHANGE population population BIGINT,
+CHANGE area area DOUBLE,
+CHANGE continent continent VARCHAR(100),
+CHANGE capital capital VARCHAR(150),
+CHANGE language language VARCHAR(100),
+CHANGE currency_name currency_name VARCHAR(50),
+CHANGE gdp_value gdp_value FLOAT,
+CHANGE density density FLOAT,
+CHANGE life_exp life_exp FLOAT;
+
+DESC country_info;
+select * from country_info;
+    
+    
